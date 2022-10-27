@@ -42,6 +42,10 @@ const PopularItems = () => {
           </div>
         ))}
       </div>
+
+      <div className="mt-5">
+        <div></div>
+      </div>
     </div>
   );
 };

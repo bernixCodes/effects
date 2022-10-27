@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { IoMdArrowDropright } from "react-icons/io";
+import { GrFacebookOption, GrTwitter, GrInstagram } from "react-icons/gr";
 
 const OtherCollections = () => {
   const [data, setData] = useState(null);
@@ -38,6 +39,43 @@ const OtherCollections = () => {
             )}
           </div>
         ))}
+      </div>
+
+      <div className="mt-32 grid md:grid-cols-2 gap-5 place-items-center w-full">
+        <div className="relative bg-slide w-fit h-fit">
+          <img src="./fig1.png" alt="" />
+          <div className="absolute bottom-1 py-3 px-2 text-white ">
+            <h2 className="font-bold text-xl mb-3">PERSONALIZATION</h2>
+            <p className="pr-8 mb-3">
+              Put a custom print on the football shirt of your choice with our
+              Personalization service.
+            </p>
+            <p>
+              Tell us what name, what number and we put it.{" "}
+              <span className="font-bold">FREE!!</span>
+            </p>
+          </div>
+        </div>
+        <div className="relative bg-slide w-fit h-fit">
+          <img src="./fig.png" alt="" />
+          <div className="absolute bottom-1 py-3 px-2 text-white ">
+            <h2 className="font-bold text-xl mb-3">SOCIAL NETWORKS</h2>
+            <p className="pr-8 mb-3">
+              Share your shirts with the #CamiestasFutbolSpainn
+            </p>
+            <div className="flex items-center gap-4 text-xl ">
+              <span className="text-headerColor p-2 rounded  bg-white">
+                <GrFacebookOption />
+              </span>
+              <span className="text-headerColor p-2 rounded  bg-white">
+                <GrTwitter />
+              </span>
+              <span className="text-headerColor p-2 rounded  bg-white">
+                <GrInstagram />
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

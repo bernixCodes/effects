@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import HeroCard from "../components/HeroCard";
 import PopularItems from "./../components/PopularItems";
 import Leagues from "../components/Leagues";
+import OtherCollections from "./../components/OtherCollections";
 
 export const getStaticProps = async () => {
   const result = await fetch(
@@ -75,6 +76,9 @@ export default function Home({ banners }) {
 
         {/* Country Leagues */}
         <Leagues />
+
+        {/* OtherCollections */}
+        <OtherCollections />
       </div>
     </div>
   );

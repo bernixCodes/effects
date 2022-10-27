@@ -12,6 +12,7 @@ module.exports = {
         greenBtnColor: "#27B03F",
         yellowColor: "#f9dc38",
         creamColor: "#fefae1",
+        slide: "rgba(17, 17, 18, 0.4)",
       },
 
       screens: {

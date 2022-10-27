@@ -32,7 +32,10 @@ const HeroCard = () => {
   return (
     <div className="flex items-center gap-5  p-5 flex-wrap justify-center  cursor-pointer w-full">
       {cardDetails.map((cardDetail) => (
-        <div className="bg-creamColor p-5 w-full  md:w-52 lg:w-96 ">
+        <div
+          key={cardDetail.id}
+          className="bg-creamColor p-5 w-full  md:w-52 lg:w-96 "
+        >
           <div className="bg-yellowColor text-left text-white w-fit p-3 rounded text-xl">
             {cardDetail.icon}
           </div>

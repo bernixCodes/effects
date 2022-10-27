@@ -30,22 +30,29 @@ const HeroCard = () => {
     },
   ];
   return (
-    <div className="flex items-center gap-5  p-5 flex-wrap justify-center md:justify-between cursor-pointer w-full">
-      {cardDetails.map((cardDetail) => (
-        <div
-          key={cardDetail.id}
-          className="bg-creamColor p-5 w-full  md:w-52 lg:w-80 "
-        >
-          <div className="bg-yellowColor text-left text-white w-fit p-3 rounded text-xl">
-            {cardDetail.icon}
+    <>
+      <div className="flex items-center gap-5  p-5 flex-wrap justify-center md:justify-between cursor-pointer w-full">
+        {cardDetails.map((cardDetail) => (
+          <div
+            key={cardDetail.id}
+            className="bg-creamColor p-5 w-full  md:w-52 lg:w-80 "
+          >
+            <div className="bg-yellowColor text-left text-white w-fit p-3 rounded text-xl">
+              {cardDetail.icon}
+            </div>
+            <div className="pt-2">
+              <h2>{cardDetail.title}</h2>
+              <p>{cardDetail.des}</p>
+            </div>
           </div>
-          <div className="pt-2">
-            <h2>{cardDetail.title}</h2>
-            <p>{cardDetail.des}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      <div className="flex mt-6">
+        <img src="/frame.png" alt="" />
+        <img src="/reward.png" alt="" />
+      </div>
+    </>
   );
 };
 

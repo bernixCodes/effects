@@ -15,7 +15,7 @@ const OtherCollections = () => {
   }, []);
   return (
     <div className="p-5">
-      <h1 className="font-bold text-3xl py-5">COUNTRY LEAGUES</h1>
+      <h1 className="font-bold text-2xl md:text-3xl py-5">COUNTRY LEAGUES</h1>
       <div className="flex flex-wrap gap-8 items-center justify-center  ">
         {data?.map((card) => (
           <div key={card.id} className="">

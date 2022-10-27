@@ -14,7 +14,9 @@ const PopularItems = () => {
   }, []);
   return (
     <div className="p-5">
-      <h1 className="font-bold text-3xl py-5">MOST POPULAR T-SHIRTS</h1>
+      <h1 className="font-bold text-2xl md:text-3xl py-5">
+        MOST POPULAR T-SHIRTS
+      </h1>
       <div className="flex gap-10 w-11/12  whitespace-nowrap overflow-x-scroll p-5">
         {data?.map((card) => (
           <div key={card.id} className="w-96 h-auto">

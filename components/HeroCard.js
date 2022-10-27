@@ -34,7 +34,7 @@ const HeroCard = () => {
       {cardDetails.map((cardDetail) => (
         <div
           key={cardDetail.id}
-          className="bg-creamColor p-5 w-full  md:w-52 lg:w-96 "
+          className="bg-creamColor p-5 w-full  md:w-52 lg:w-80 "
         >
           <div className="bg-yellowColor text-left text-white w-fit p-3 rounded text-xl">
             {cardDetail.icon}

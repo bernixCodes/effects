@@ -8,6 +8,7 @@ import HeroCard from "../components/HeroCard";
 import PopularItems from "./../components/PopularItems";
 import Leagues from "../components/Leagues";
 import OtherCollections from "./../components/OtherCollections";
+import Footer from "../components/Footer";
 
 export const getStaticProps = async () => {
   const result = await fetch(
@@ -79,6 +80,9 @@ export default function Home({ banners }) {
 
         {/* OtherCollections */}
         <OtherCollections />
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

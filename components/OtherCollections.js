@@ -41,7 +41,7 @@ const OtherCollections = () => {
         ))}
       </div>
 
-      <div className="mt-32 grid md:grid-cols-2 gap-5 place-items-center w-full">
+      <div className="md:mt-32 mt-10 grid md:grid-cols-2 gap-5 place-items-center w-full">
         <div className="relative bg-slide w-fit h-fit">
           <img src="./fig1.png" alt="" />
           <div className="absolute bottom-1 py-3 px-2 text-white ">

@@ -30,7 +30,7 @@ const HeroCard = () => {
     },
   ];
   return (
-    <div className="flex items-center gap-5  p-5 flex-wrap justify-center  cursor-pointer w-full">
+    <div className="flex items-center gap-5  p-5 flex-wrap justify-center md:justify-between cursor-pointer w-full">
       {cardDetails.map((cardDetail) => (
         <div
           key={cardDetail.id}

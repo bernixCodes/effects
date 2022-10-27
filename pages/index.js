@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Header from "../components/Header";
 import "@fontsource/montserrat";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +7,7 @@ import HeroCard from "../components/HeroCard";
 import PopularItems from "./../components/PopularItems";
 import Leagues from "../components/Leagues";
 import OtherCollections from "./../components/OtherCollections";
-import Footer from "../components/Footer";
+import { HiShoppingBag } from "react-icons/hi";
 
 export const getStaticProps = async () => {
   const result = await fetch(
@@ -28,6 +27,8 @@ export default function Home({ banners }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
+    cssEase: "linear",
+    adaptiveHeight: true,
   };
   function createMarkup(c) {
     return { __html: c };
@@ -42,25 +43,33 @@ export default function Home({ banners }) {
 
       <div>
         {/* Hero */}
-        <div className=" m-7 relative ">
+        <div className=" m-7  ">
           <Slider {...settings}>
             {banners.map((banner) => (
               <div
                 key={banner.id}
-                className=" w-full h-40 md:h-96 overflow-hidden"
+                className=" w-40 h-40 md:h-80 md:w-80 overflow-hidden relative"
               >
                 <div className="absolute">
                   <div
                     className="text-xl md:text-2xl w-72 md:fit text-white font-semibold m-5"
                     dangerouslySetInnerHTML={createMarkup(banner.content)}
                   ></div>
+                  <div className=" md:hidden ml-96 ">
+                    <div className="flex items-center">
+                      <button className="bg-slide w-fit border px-2 py-1 text-white text-sm">
+                        {banner.btn_text}
+                      </button>
+                      <span className="bg-white p-2 ">
+                        <HiShoppingBag />
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <div className="absolute bottom-1 -left-20">
-                  <button className=" text-white">{banner.btn_text}</button>
-                </div>
+
                 <img
                   src={banner.image}
-                  className="object-contain  w-full overflow-hidden  "
+                  className="object-fill  w-full overflow-hidden  "
                 />
               </div>
             ))}

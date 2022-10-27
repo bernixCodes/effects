@@ -16,8 +16,8 @@ const OtherCollections = () => {
   }, []);
   return (
     <div className="p-5">
-      <h1 className="font-bold text-2xl md:text-3xl py-5">COUNTRY LEAGUES</h1>
-      <div className="flex flex-wrap gap-8 items-center justify-center  ">
+      <h1 className="font-bold text-2xl md:text-3xl py-5">Other Collections</h1>
+      <div className="flex flex-wrap gap-8 items-center justify-center md:justify-start  ">
         {data?.map((card) => (
           <div key={card.id} className="">
             {card.image && (
@@ -41,7 +41,7 @@ const OtherCollections = () => {
         ))}
       </div>
 
-      <div className="md:mt-32 mt-10 grid md:grid-cols-2 gap-5 place-items-center w-full">
+      <div className="md:mt-32 mt-10 grid md:grid-cols-2 gap-5 place-items-between w-full">
         <div className="relative bg-slide w-fit h-fit">
           <img src="./fig1.png" alt="" />
           <div className="absolute bottom-1 py-3 px-2 text-white ">

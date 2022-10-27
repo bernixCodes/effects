@@ -5,13 +5,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HeroCard from "../components/HeroCard";
+import PopularItems from "./../components/PopularItems";
 
 export const getStaticProps = async () => {
   const result = await fetch(
     "https://camiestas-futbol.effectstudios.co/api/v1/banner"
   );
   const data = await result.json();
-  console.log(data.banners.data);
   return {
     props: { banners: data.banners.data },
   };
@@ -68,6 +68,8 @@ export default function Home({ banners }) {
 
         {/* HeroCards */}
         <HeroCard />
+
+        <PopularItems />
       </div>
     </div>
   );

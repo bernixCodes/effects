@@ -41,8 +41,6 @@ export default function Home({ banners }) {
       </Head>
 
       <div>
-        {/* Header */}
-        <Header />
         {/* Hero */}
         <div className=" m-7 relative ">
           <Slider {...settings}>
@@ -80,9 +78,6 @@ export default function Home({ banners }) {
 
         {/* OtherCollections */}
         <OtherCollections />
-
-        {/* Footer */}
-        <Footer />
       </div>
     </div>
   );

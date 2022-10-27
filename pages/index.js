@@ -43,7 +43,7 @@ export default function Home({ banners }) {
 
       <div>
         {/* Hero */}
-        <div className=" m-7  ">
+        <div className=" m-7 ">
           <Slider {...settings}>
             {banners.map((banner) => (
               <div
@@ -55,7 +55,14 @@ export default function Home({ banners }) {
                     className="text-xl md:text-2xl w-72 md:fit text-white font-semibold m-5"
                     dangerouslySetInnerHTML={createMarkup(banner.content)}
                   ></div>
-                  <div className=" md:hidden ml-96 ">
+                </div>
+
+                <div className="relative">
+                  <img
+                    src={banner.image}
+                    className="object-fill  w-full overflow-hidden  "
+                  />
+                  <div className=" absolute bottom-5 right-4">
                     <div className="flex items-center">
                       <button className="bg-slide w-fit border px-2 py-1 text-white text-sm">
                         {banner.btn_text}
@@ -66,11 +73,6 @@ export default function Home({ banners }) {
                     </div>
                   </div>
                 </div>
-
-                <img
-                  src={banner.image}
-                  className="object-fill  w-full overflow-hidden  "
-                />
               </div>
             ))}
           </Slider>

@@ -20,8 +20,8 @@ const PopularItems = () => {
       </h1>
       <div className="flex gap-10 w-full  whitespace-nowrap overflow-x-scroll p-5">
         {data?.map((card) => (
-          <Link href={`/popular-product/${card.id}`}>
-            <div key={card.id} className="w-96 h-auto">
+          <div key={card.id} className="w-96 h-auto">
+            <Link href={`/popular-product/${card.id}`}>
               <div className="relative">
                 <img
                   src={card.gallery[0].image}
@@ -41,8 +41,8 @@ const PopularItems = () => {
                   <p className="text-red-500 line-through text-sm">$89.95</p>
                 </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         ))}
       </div>
 

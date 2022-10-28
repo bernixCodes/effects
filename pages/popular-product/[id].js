@@ -3,7 +3,7 @@ import { HiShoppingCart } from "react-icons/hi";
 
 const ItemDetail = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2  md:px-32 md:py-10 p-8">
+    <div className="grid grid-cols-1 lg:grid-cols-2  md:px-32 md:py-10 p-8">
       <div>Route chain</div>
 
       <div className="py-5">

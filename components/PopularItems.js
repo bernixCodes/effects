@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const PopularItems = () => {
   const [data, setData] = useState(null);
@@ -19,27 +20,29 @@ const PopularItems = () => {
       </h1>
       <div className="flex gap-10 w-11/12  whitespace-nowrap overflow-x-scroll p-5">
         {data?.map((card) => (
-          <div key={card.id} className="w-96 h-auto">
-            <div className="relative">
-              <img
-                src={card.gallery[0].image}
-                alt=""
-                className="object-contain h-72"
-              />
-              <button className="absolute bottom-14 text-white left-5 bg-greenBtnColor py-2 px-4 rounded">
-                Save 67%
-              </button>
-            </div>
-            <div className="border w-72 overflow-hidden">
-              <p className="font-light p-3  px-5 text-sm text-center">
-                {card.product_name}
-              </p>
-              <div className="flex items-center  gap-3 p-3">
-                <p className="font-bold text-2xl">$30.00</p>
-                <p className="text-red-500 line-through text-sm">$89.95</p>
+          <Link href={`/popular-product/${card.id}`}>
+            <div key={card.id} className="w-96 h-auto">
+              <div className="relative">
+                <img
+                  src={card.gallery[0].image}
+                  alt=""
+                  className="object-contain h-72"
+                />
+                <button className="absolute bottom-14 text-white left-5 bg-greenBtnColor py-2 px-4 rounded">
+                  Save 67%
+                </button>
+              </div>
+              <div className="border w-72 overflow-hidden">
+                <p className="font-light p-3  px-5 text-sm text-center">
+                  {card.product_name}
+                </p>
+                <div className="flex items-center  gap-3 p-3">
+                  <p className="font-bold text-2xl">$30.00</p>
+                  <p className="text-red-500 line-through text-sm">$89.95</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

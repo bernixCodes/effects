@@ -18,7 +18,7 @@ const PopularItems = () => {
       <h1 className="font-bold text-2xl md:text-3xl py-5">
         MOST POPULAR T-SHIRTS
       </h1>
-      <div className="flex gap-10 w-11/12  whitespace-nowrap overflow-x-scroll p-5">
+      <div className="flex gap-10 w-full  whitespace-nowrap overflow-x-scroll p-5">
         {data?.map((card) => (
           <Link href={`/popular-product/${card.id}`}>
             <div key={card.id} className="w-96 h-auto">

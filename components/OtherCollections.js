@@ -18,9 +18,9 @@ const OtherCollections = () => {
     <div className="p-5 ">
       <h1 className="font-bold text-2xl md:text-3xl py-5">Other Collections</h1>
       {/* <div className="grid  grid-cols-2 md:grid-cols-3 gap-5 place-items-center "> */}
-      <div className=" grid md:grid-cols-4  gap-5 w-full h-auto">
+      <div className=" grid md:grid-cols-4 grid-cols-2  gap-5 w-full h-auto">
         {data?.map((card) => (
-          <div className="flex">
+          <div className="flex" key={card.id}>
             {card.image && (
               <div>
                 <img

@@ -13,11 +13,11 @@ const Leagues = () => {
     );
   }, []);
   return (
-    <div className="p-5">
+    <div className="p-5 m-8 md:m-0">
       <h1 className="font-bold text-2xl md:text-3xl py-5">COUNTRY LEAGUES</h1>
-      <div className="flex flex-wrap gap-8 items-center md:justify-between justify-center">
+      <div className="grid  grid-cols-2 md:grid-cols-4 gap-5 place-items-center ">
         {data?.map((card) => (
-          <div key={card.id} className="">
+          <div key={card.id} className="hover:scale-105">
             <img
               src={card.image ? card.image : "/notFoung.jpg"}
               alt=""

@@ -57,11 +57,19 @@ export default function Home({ banners }) {
                   ></div>
                 </div>
 
-                <div className="relative">
-                  <img
+                <div
+                  className="relative w-full h-96"
+                  style={{
+                    backgroundImage: `url(${banner.image})`,
+                    width: "100%",
+                    objectFit: "fill",
+                    // backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  {/* <img
                     src={banner.image}
-                    className="object-fill  w-full overflow-hidden  "
-                  />
+                    className="object-fill  w-full max-h-96 "
+                  /> */}
                   <div className=" absolute bottom-5 right-4">
                     <div className="flex items-center">
                       <button className="bg-slide w-fit border px-2 py-1 text-white text-sm">
